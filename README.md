@@ -107,9 +107,9 @@ in any modern web browser.
 
 ## 🌐 Live Demo
 
-**Coming soon.**
+🚀 **[Visit Nexora](https://virk-jaskaran2009.github.io/Nexora/)**
 
-The project will be deployed using GitHub Pages.
+Nexora is deployed using GitHub Pages and is available as a live web experience.
 
 ## 📸 Screenshots
 
