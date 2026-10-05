@@ -1,173 +1,137 @@
-# Nexora
+# Nexora AI Forge
 
-> A modern web development project focused on responsive interfaces, interactive experiences, and automation-ready solutions.
+> **AI Automation & Digital Solutions Agency** — Delhi NCR, India
+> Build smarter. Automate better.
 
-## 🚀 Overview
+A production-ready static marketing website with a real enquiry pipeline:
 
-**Nexora** is a modern web development project built with core front-end technologies.
+**Visitor → Enquiry form → Secure serverless endpoint → Email notification → Stored lead**
 
-The project focuses on creating a clean, responsive, and interactive web experience while providing a foundation that can be expanded into more advanced **web applications, automation workflows, and productivity solutions**.
-
-Nexora is designed with scalability in mind, allowing future development to introduce additional automation, integrations, APIs, and intelligent features.
-
-## ✨ Current Features
-
-- Modern and responsive user interface
-- Interactive front-end functionality
-- Responsive layouts for different screen sizes
-- Structured HTML architecture
-- Custom CSS styling
-- JavaScript-based interactions
-- Clean and maintainable project structure
-- Browser-based implementation with no installation required
-
-## 🧩 Project Focus
-
-Nexora is being developed around three major areas:
-
-### 🌐 Web Development
-
-Building modern, responsive, and user-friendly web experiences using:
-
-- HTML5
-- CSS3
-- JavaScript
-- Responsive design principles
-- UI/UX concepts
-
-### ⚙️ Automation
-
-The project is designed with future automation capabilities in mind, including:
-
-- Workflow automation
-- Repetitive-task automation
-- API integrations
-- Productivity tools
-- Automated data handling
-- Smart web-based utilities
-
-### 🚀 Future Technology
-
-As the project evolves, Nexora can be expanded with technologies such as:
-
-- Backend services
-- APIs
-- Databases
-- Authentication
-- Automation frameworks
-- AI-powered functionality
-- External service integrations
-
-## 🛠️ Technologies Used
-
-| Technology | Purpose |
-|---|---|
-| HTML5 | Website structure |
-| CSS3 | Styling and responsive design |
-| JavaScript | Interactivity and functionality |
-
-## 📁 Project Structure
-
-```text
-Nexora/
-├── index.html
-├── styles.css
-├── script.js
-├── .gitignore
-└── README.md
-```
-
-## ▶️ Run Locally
-
-Nexora currently requires no package installation or build process.
-
-### 1. Clone the repository
-
-```bash
-git https://github.com/virk-jaskaran2009/Nexora.git
-```
-
-### 2. Open the project
-
-Navigate into the project folder:
-
-```bash
-cd nexora
-```
-
-### 3. Run the website
-
-Open:
-
-```text
-index.html
-```
-
-in any modern web browser.
-
-## 🌐 Live Demo
-
-🚀 **[Visit Nexora](https://virk-jaskaran2009.github.io/Nexora/)**
-
-Nexora is deployed using GitHub Pages and is available as a live web experience.
-
-## 📸 Screenshots
-
-Screenshots of the project interface will be added here.
-
-## 🗺️ Roadmap
-
-### Phase 1 — Front-End Foundation
-- [x] Responsive website structure
-- [x] Custom styling
-- [x] JavaScript interactions
-- [x] GitHub repository setup
-
-### Phase 2 — Deployment & Presentation
-- [ ] GitHub Pages deployment
-- [ ] Professional screenshots
-- [ ] Improved documentation
-- [ ] Performance optimization
-
-### Phase 3 — Automation
-- [ ] Automation workflows
-- [ ] API integrations
-- [ ] Automated data processing
-- [ ] Productivity-focused tools
-
-### Phase 4 — Advanced Development
-- [ ] Backend integration
-- [ ] Database integration
-- [ ] Authentication
-- [ ] AI-powered features
-- [ ] Advanced automation systems
-
-## 🎯 Project Goals
-
-The long-term goal of Nexora is to evolve from a front-end web project into a broader platform combining:
-
-**Web Development + Automation + Productivity + Intelligent Technology**
-
-The project is intended to serve as both a practical development project and an evolving portfolio demonstrating technical growth.
-
-## 🤝 Contributions
-
-This project is currently maintained as a personal development and portfolio project.
-
-Suggestions, ideas, and improvements are welcome as the project evolves.
-
-## 📄 License
-
-This project is currently available for educational and portfolio purposes.
-
-A formal open-source license may be added in a future version.
-
-## 👨‍💻 Author
-
-**Jaskaran**
-
-Nexora is continuously being developed and improved as part of an ongoing journey in web development, automation, and technology.
+No frameworks, no bundler, no tracking scripts. Deployed on Netlify.
 
 ---
 
-⭐ If you find Nexora interesting, consider giving the repository a star.
+## ✨ What's on the site
+
+- Responsive single-page site (nav, hero, about, 6 services, 4-step process, trust section, solutions, INR pricing, FAQ, contact)
+- **INR pricing** (Starter ₹4,999+ · Growth ₹14,999+ · Pro ₹29,999+ · Custom)
+- **Enquiry system** that really delivers: validation → spam filtering → optional database storage → email notification
+- WhatsApp CTAs (hero, pricing, contact, footer) driven by one config value
+- Privacy Policy, Terms & Conditions, branded 404
+- SEO: title/meta/OG tags, JSON-LD `ProfessionalService`, `robots.txt`, `sitemap.xml` (generated at build)
+- Accessibility: skip link, focus states, ARIA, `prefers-reduced-motion`, keyboard-friendly menu
+
+## 📁 Structure
+
+```text
+Nexora/
+├── index.html                 # the site
+├── privacy.html · terms.html · 404.html
+├── styles.css                 # design system (tokens → components → responsive)
+├── script.js                  # nav, animations, FAQ, enquiry submission
+├── config.js                  # ← all public business config (email, WhatsApp, endpoint)
+├── og-image.png               # 1200×630 share image
+├── robots.txt                 # generated by scripts/build.js
+├── netlify.toml               # build, publish, function + security headers
+├── .env.example               # environment variable NAMES only
+├── netlify/functions/
+│   └── enquiry.js             # ← the enquiry endpoint (validation, email, storage)
+├── supabase/enquiries.sql     # lead table schema (RLS = no public access)
+├── scripts/build.js           # copies site → dist/, adds sitemap + canonical URLs
+└── tests/
+    ├── enquiry.test.js        # unit tests: node --test tests/enquiry.test.js
+    └── browser-check.mjs      # real-browser checks: node tests/browser-check.mjs
+```
+
+## 🔁 How the enquiry system works
+
+```text
+Browser (script.js)
+   │  JSON POST + client validation + 15s timeout
+   ▼
+netlify/functions/enquiry.js        ← all secrets live here (env vars)
+   │  1. method/body checks
+   │  2. honeypot + time trap (bots get a fake success, nothing sent)
+   │  3. per-IP rate limit
+   │  4. server-side validation (allowlists, never trusts the browser)
+   │  5. store to Supabase   (if SUPABASE_* configured)
+   │  6. send email via Resend (if RESEND_API_KEY configured)
+   ▼
+200 {ok:true}         → visitor sees "Thanks! Your enquiry has been received…"
+503 NOT_CONFIGURED    → frontend falls back to Netlify Forms (on *.netlify.app)
+502 / 4xx / timeout   → friendly error + "Message us on WhatsApp" (input preserved)
+```
+
+The frontend never contains secrets. Success is only shown after a real `200`.
+
+## ⚙️ Configuration
+
+**Public values** (no secrets) → `config.js`:
+
+- business email, phone, **WhatsApp number** + default message, location
+- enquiry endpoint, site URL, social links (empty = hidden)
+
+**Secrets** → Netlify → Site settings → Environment variables (see `.env.example`):
+
+| Variable | Purpose |
+|---|---|
+| `RESEND_API_KEY` | send notification emails (Resend) |
+| `ENQUIRY_TO_EMAIL` | your inbox that receives enquiries |
+| `ENQUIRY_FROM_EMAIL` | verified sender, e.g. `Nexora AI Forge <enquiries@yourdomain.com>` |
+| `SUPABASE_URL` / `SUPABASE_SERVICE_ROLE_KEY` | optional lead storage |
+| `ENQUIRY_TABLE` | optional, defaults to `enquiries` |
+| `ENQUIRY_RATE_LIMIT` / `ENQUIRY_MIN_SECONDS` | optional spam tuning |
+| `SITE_URL` | final URL → enables sitemap.xml + canonical/og:image tags |
+
+## 🚀 Deploy (Netlify)
+
+1. Push this repo to GitHub and import it in Netlify (it reads `netlify.toml` automatically).
+2. Build command `node scripts/build.js`, publish directory `dist`.
+3. Add the environment variables above.
+4. Set `SITE_URL` to your Netlify URL → sitemap + canonical + og:image tags are generated.
+
+**Without any env vars the site still works**: on `*.netlify.app` the form falls back to
+Netlify's built-in form capture, so you can enable
+*Forms → form `enquiry` → Notifications → email* and receive enquiries with zero setup.
+
+### Optional: database of leads
+
+1. Create a Supabase project → SQL Editor → run `supabase/enquiries.sql`.
+2. Add `SUPABASE_URL` + `SUPABASE_SERVICE_ROLE_KEY` to Netlify.
+3. Leads then appear in the `enquiries` table with `status = New`
+   (`New → Contacted → In Discussion → Converted → Closed`).
+
+No admin dashboard was built on purpose — reliable storage + email first, UI later.
+
+## 💻 Local development
+
+```bash
+# static site only
+npx serve .            # or any static server
+
+# full stack (function included)
+npx netlify-cli dev    # uses .env if you create one locally
+
+# tests
+node --test tests/enquiry.test.js
+node tests/browser-check.mjs     # needs Chrome; starts its own server
+```
+
+## ✅ Testing status
+
+- `node --test tests/enquiry.test.js` — **11/11 passing**: validation, honeypot, time trap,
+  rate limit, Resend/Supabase success, HTML escaping, 503 not-configured, 502 friendly
+  failure, partial delivery.
+- `node tests/browser-check.mjs` — **38/38 passing** in headless Chrome: zero horizontal
+  overflow at 360/390/414/600/768/1024/1440px, SEO basics, no fabricated stats, mobile
+  menu, tap-target sizes, form validation, real success state, real error state with input
+  preserved, privacy/terms/404 pages.
+
+## 🔒 Security notes
+
+- No API keys, tokens or passwords anywhere in frontend code.
+- `.env*` is gitignored; `.env.example` holds names only.
+- Server-side validation with allowlists; HTML escaped in notification emails.
+- Honeypot + time trap + per-IP rate limiting on the endpoint.
+- Security headers (CSP, nosniff, frame-options, referrer-policy) via `netlify.toml`.
+- Supabase table has RLS enabled with **no public policies** — only the server role writes.

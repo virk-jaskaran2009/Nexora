@@ -1,0 +1,24 @@
+# Netlify configuration — Nexora AI Forge
+# Build compiles a clean `dist/` folder (sitemap + canonical URLs + copy of the site).
+# Secrets are NOT set here — add them in the Netlify dashboard:
+# Site settings → Environment variables (see .env.example).
+
+[build]
+  command = "node scripts/build.js"
+  publish = "dist"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+# Security headers for every response
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "SAMEORIGIN"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    # 'unsafe-inline' is required for the JSON-LD structured data block and
+    # inline style attributes; all actual scripts are external files.
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"
