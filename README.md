@@ -1,80 +1,174 @@
 # Nexora
 
-Nexora is a modern automation-focused website developed as a personal web development project. The project was created to gain practical experience in building, managing, and deploying a complete website while exploring AI-assisted software development.
+Nexora is a modern web project built around the concept of an AI and automation-focused digital agency.
 
-The website is based on an automation agency concept and focuses on a clean, modern, and responsive user experience.
+The project was developed as a practical learning experience in modern web development and AI-assisted software development. It covers the complete workflow of taking a website from an initial concept and local development environment to version control, deployment, and a publicly accessible production website.
 
 ## Live Website
 
-[Nexora — Live Website](https://nexora-aiforge.netlify.app)
+**[nexora-aiforge.netlify.app](https://nexora-aiforge.netlify.app)**
 
-## Project Objectives
+## Overview
 
-The primary objective of Nexora was to gain hands-on experience with modern web development and development workflows, including:
+Nexora was created to explore how a professional-looking web experience can be designed and developed with the support of AI coding tools.
 
-* Building a complete website from scratch
-* Working with AI coding agents as development assistants
-* Practicing front-end development
-* Learning Git and GitHub for version control
-* Understanding the process of deploying a website
-* Managing and updating a live project
+Rather than being developed as a commercial product, the project serves as a hands-on environment for learning and experimenting with:
 
-## Technologies and Tools
+- Front-end web development
+- AI-assisted coding
+- Project structure and code organization
+- Git and version control
+- GitHub-based project management
+- Continuous deployment with Netlify
+- Iterative development and debugging
 
-* HTML5
-* CSS3
-* JavaScript
-* Git
-* GitHub
-* Netlify
-* AI-assisted development tools
+The project was developed locally, refined through multiple iterations, and ultimately deployed as a live website.
 
-## Key Features
+## Objectives
 
-* Modern and responsive interface
-* Automation-focused website structure
-* Interactive front-end components
-* Responsive layouts for different screen sizes
-* Clean navigation and organized content
-* Live deployment through Netlify
-* Version-controlled source code using GitHub
+The primary objectives of the project were to:
 
-## Development Process
+- Build and deploy a complete website from an initial concept
+- Develop a practical understanding of HTML, CSS, and JavaScript
+- Learn how AI coding agents can be incorporated into a development workflow
+- Understand fundamental Git and GitHub workflows
+- Learn how a repository can be connected to a deployment platform
+- Gain experience with the transition from local development to a production website
 
-The project followed a practical development workflow:
+## Technology Stack
 
-**Planning → AI-Assisted Development → Local Development → Testing → Git Version Control → GitHub → Netlify Deployment**
+| Technology | Purpose |
+|---|---|
+| HTML5 | Page structure and semantic content |
+| CSS3 | Styling, layout, responsiveness, and visual design |
+| JavaScript | Client-side functionality and interactions |
+| Git | Version control and change tracking |
+| GitHub | Repository and source-code management |
+| Netlify | Deployment and web hosting |
+| AI Coding Tools | Development assistance and implementation support |
 
-This workflow provided experience in taking a project from an initial concept through development, version control, and deployment.
+## Development Workflow
+
+The project followed a simple development and deployment workflow:
+
+```text
+Concept
+   ↓
+AI-assisted development
+   ↓
+Local development & testing
+   ↓
+Git version control
+   ↓
+GitHub repository
+   ↓
+Netlify deployment
+   ↓
+Live website
+```
+
+Changes made during development were tracked with Git and pushed to the GitHub repository. The repository was then connected to Netlify for deployment, allowing updates to the live website through the development workflow.
+
+## Key Areas
+
+### Front-End Development
+
+The project provided practical experience with the core technologies used to build web interfaces:
+
+- Structuring pages with HTML
+- Creating layouts and visual styles with CSS
+- Adding client-side interactions with JavaScript
+- Working with responsive layouts
+- Organizing front-end project files
+
+### AI-Assisted Development
+
+AI coding tools were used as development assistants throughout the project.
+
+This included using AI to:
+
+- Generate and modify code
+- Implement requested website changes
+- Identify and resolve issues
+- Improve existing sections
+- Explore development approaches
+
+An important part of the project was learning how to work with AI as a development tool rather than treating it as a replacement for understanding the underlying code.
+
+### Version Control
+
+Git was used to track changes throughout development.
+
+The project introduced practical use of commands and concepts such as:
+
+```bash
+git status
+git diff
+git add
+git commit
+git push
+```
+
+This provided experience with maintaining project history and synchronizing local development with a remote GitHub repository.
+
+### Deployment
+
+Nexora was deployed using Netlify and connected to its GitHub repository.
+
+This created a simple continuous deployment workflow in which updates pushed to the configured repository branch can be built and deployed to the live website.
+
+## Project Structure
+
+The project follows a straightforward front-end structure. Core files include:
+
+```text
+Nexora/
+├── index.html
+├── styles.css
+├── script.js
+├── scripts/
+├── netlify/
+└── README.md
+```
+
+> The exact project structure may contain additional files and configuration depending on the current version of the project.
 
 ## Learning Outcomes
 
-Through the development of Nexora, I gained practical experience in:
+Nexora provided practical experience in several areas of software development:
 
-* Structuring web pages using HTML
-* Designing responsive interfaces using CSS
-* Implementing functionality with JavaScript
-* Using AI coding agents effectively during development
-* Working with Git commands and repositories
-* Managing source code through GitHub
-* Connecting a GitHub repository to Netlify
-* Deploying and maintaining a live website
-
-## Future Development
-
-Potential future improvements include:
-
-* Enhancing the user interface and overall design
-* Adding more advanced interactive features
-* Integrating APIs and backend functionality
-* Exploring database integration
-* Developing additional automation-related features
-* Improving performance and accessibility
+- Understanding the relationship between HTML, CSS, and JavaScript
+- Working with an AI-assisted development workflow
+- Running and testing a project locally
+- Reading and modifying existing code
+- Using Git for version control
+- Managing a project through GitHub
+- Connecting a repository to a deployment platform
+- Understanding the basic local-to-production development workflow
+- Debugging and iterating on a live project
 
 ## Project Status
 
-Completed as a personal learning and experimentation project, with scope for future development and improvements.
+**Completed — Learning & Development Project**
 
----
+Nexora is considered a completed learning project. The primary objective was to gain practical development experience rather than build a production-scale commercial platform.
 
-**Nexora — A practical project for learning web development, AI-assisted coding, version control, and deployment.**
+The project may continue to receive experimental improvements as part of ongoing learning and development.
+
+## Future Exploration
+
+Potential areas for further experimentation include:
+
+- Improving accessibility and performance
+- Expanding interactive functionality
+- Integrating external APIs
+- Exploring backend development
+- Adding database-driven functionality
+- Experimenting with authentication
+- Building more advanced automation features
+
+## Author
+
+**Jaskaran Virk**
+
+This project represents an early practical step into web development and AI-assisted software development, with a focus on learning through building and experimentation.
