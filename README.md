@@ -1,128 +1,98 @@
-# Nexora
+# Nexora AI Forge
 
-Nexora is a modern web project built around the concept of an AI and automation-focused digital agency.
+Nexora AI Forge is an AI and automation agency website developed as a hands-on learning project. It explores how a modern business website can present digital services through a professional layout, structured content, pricing sections, and enquiry forms.
 
-The project was developed as a practical learning experience in modern web development and AI-assisted software development. It covers the complete workflow of taking a website from an initial concept and local development environment to version control, deployment, and a publicly accessible production website.
+**Live Website:** https://nexora-aiforge.netlify.app
 
-## Live Website
+## Project Overview
 
-**[nexora-aiforge.netlify.app](https://nexora-aiforge.netlify.app)**
+The website is designed around the concept of a digital agency that helps businesses improve their workflows through web development and AI-powered automation.
 
-## Overview
+It presents Nexora's services, explains the project workflow, showcases sample projects, provides pricing packages, and allows visitors to explore services or submit enquiries.
 
-Nexora was created to explore how a professional-looking web experience can be designed and developed with the support of AI coding tools.
+The primary goal of this project was to gain practical experience with web development, AI-assisted coding, version control, and website deployment rather than establish a commercial agency.
 
-Rather than being developed as a commercial product, the project serves as a hands-on environment for learning and experimenting with:
+## Website Features
 
-- Front-end web development
-- AI-assisted coding
-- Project structure and code organization
-- Git and version control
-- GitHub-based project management
-- Continuous deployment with Netlify
-- Iterative development and debugging
+### 1. Homepage and Landing Section
+- Clear introduction to the Nexora brand and its services.
+- Prominent calls to action for exploring services and booking a strategy call.
+- Visual elements representing automated workflows.
 
-The project was developed locally, refined through multiple iterations, and ultimately deployed as a live website.
+### 2. About Section
+- Introduces the agency concept and its approach to solving repetitive business tasks.
+- Explains the value of combining web development and automation.
 
-## Objectives
+### 3. Services Section
+The website presents four main service categories:
 
-The primary objectives of the project were to:
+- **Website Development:** Business websites, landing pages, e-commerce storefronts, and web applications.
+- **AI Automation:** AI-assisted workflows for repetitive tasks, data processing, follow-ups, and reporting.
+- **WhatsApp Automation:** Customer communication, lead qualification, and automated updates.
+- **Instagram Automation:** Automated replies, direct-message workflows, and lead capture.
 
-- Build and deploy a complete website from an initial concept
-- Develop a practical understanding of HTML, CSS, and JavaScript
-- Learn how AI coding agents can be incorporated into a development workflow
-- Understand fundamental Git and GitHub workflows
-- Learn how a repository can be connected to a deployment platform
-- Gain experience with the transition from local development to a production website
+These sections represent the services offered by the agency concept.
+
+### 4. How It Works
+The website explains a four-step project workflow:
+
+1. Discovery call
+2. Project planning and quotation
+3. Development and integration
+4. Launch and support
+
+### 5. Selected Work
+A portfolio-style section displays sample project scenarios covering dental appointment automation, e-commerce, logistics, Instagram lead generation, real estate, and customer support.
+
+These examples are presented as part of the website's agency concept and should not be interpreted as independently verified client work.
+
+### 6. Pricing Packages
+The website includes three service package categories:
+- Launch
+- Growth
+- Scale
+
+Each package presents a different scope of services, helping demonstrate how an agency website can communicate its offerings and pricing structure.
+
+### 7. FAQ Section
+A frequently asked questions section covers delivery timelines, integrations, ownership, support, pricing, and the potential benefits of automation.
+
+### 8. Contact and Enquiry Sections
+The website includes enquiry-focused sections with calls to action, contact information, and form fields for collecting project requirements.
+
+Form submission and email delivery depend on the corresponding backend integrations being configured and working correctly.
 
 ## Technology Stack
 
 | Technology | Purpose |
 |---|---|
-| HTML5 | Page structure and semantic content |
-| CSS3 | Styling, layout, responsiveness, and visual design |
-| JavaScript | Client-side functionality and interactions |
-| Git | Version control and change tracking |
-| GitHub | Repository and source-code management |
-| Netlify | Deployment and web hosting |
-| AI Coding Tools | Development assistance and implementation support |
+| HTML5 | Website structure and content |
+| CSS3 | Layout, styling, and responsive design |
+| JavaScript | Client-side interactions |
+| Node.js | Running the configured build script |
+| Git | Version control |
+| GitHub | Source-code hosting and repository management |
+| Netlify | Website hosting and deployment |
+| AI Coding Tools | Development assistance and code generation |
 
 ## Development Workflow
 
-The project followed a simple development and deployment workflow:
+The project followed a practical development workflow:
 
-```text
-Concept
-   ↓
-AI-assisted development
-   ↓
-Local development & testing
-   ↓
-Git version control
-   ↓
-GitHub repository
-   ↓
-Netlify deployment
-   ↓
-Live website
-```
-
-Changes made during development were tracked with Git and pushed to the GitHub repository. The repository was then connected to Netlify for deployment, allowing updates to the live website through the development workflow.
-
-## Key Areas
-
-### Front-End Development
-
-The project provided practical experience with the core technologies used to build web interfaces:
-
-- Structuring pages with HTML
-- Creating layouts and visual styles with CSS
-- Adding client-side interactions with JavaScript
-- Working with responsive layouts
-- Organizing front-end project files
-
-### AI-Assisted Development
-
-AI coding tools were used as development assistants throughout the project.
-
-This included using AI to:
-
-- Generate and modify code
-- Implement requested website changes
-- Identify and resolve issues
-- Improve existing sections
-- Explore development approaches
-
-An important part of the project was learning how to work with AI as a development tool rather than treating it as a replacement for understanding the underlying code.
-
-### Version Control
-
-Git was used to track changes throughout development.
-
-The project introduced practical use of commands and concepts such as:
-
-```bash
-git status
-git diff
-git add
-git commit
-git push
-```
-
-This provided experience with maintaining project history and synchronizing local development with a remote GitHub repository.
-
-### Deployment
-
-Nexora was deployed using Netlify and connected to its GitHub repository.
-
-This created a simple continuous deployment workflow in which updates pushed to the configured repository branch can be built and deployed to the live website.
+1. Developed the initial concept with AI assistance.
+2. Generated and refined website code using an AI coding agent.
+3. Worked on the project locally and tested changes.
+4. Used Git to track changes.
+5. Uploaded and maintained the source code on GitHub.
+6. Connected the repository to Netlify.
+7. Published the website online and verified updates to the live version.
 
 ## Project Structure
 
-The project follows a straightforward front-end structure. Core files include:
+The project includes the website's front-end files, build configuration, and deployment-related files.
 
 ```text
-Nexora/
+Nexora-AI-Forge/
 ├── index.html
 ├── styles.css
 ├── script.js
@@ -131,44 +101,41 @@ Nexora/
 └── README.md
 ```
 
-> The exact project structure may contain additional files and configuration depending on the current version of the project.
+The exact files and folders may vary with the current repository version.
 
-## Learning Outcomes
+## Learning Objectives
 
-Nexora provided practical experience in several areas of software development:
+This project provided practical exposure to:
 
-- Understanding the relationship between HTML, CSS, and JavaScript
-- Working with an AI-assisted development workflow
-- Running and testing a project locally
-- Reading and modifying existing code
-- Using Git for version control
-- Managing a project through GitHub
-- Connecting a repository to a deployment platform
-- Understanding the basic local-to-production development workflow
-- Debugging and iterating on a live project
+- HTML, CSS, and JavaScript fundamentals.
+- Building a multi-section business website.
+- Using AI coding tools to generate and modify code.
+- Understanding project files and development workflows.
+- Testing changes and troubleshooting issues.
+- Using Git and GitHub for version control.
+- Deploying a website through Netlify.
+- Understanding the process of taking a project from local development to a live website.
 
 ## Project Status
 
-**Completed — Learning & Development Project**
+**Completed — Learning and Development Project**
 
-Nexora is considered a completed learning project. The primary objective was to gain practical development experience rather than build a production-scale commercial platform.
+Nexora AI Forge represents an early step in learning web development and AI-assisted software development. The project demonstrates the process of building, managing, and deploying a website while developing a better understanding of the tools involved.
 
-The project may continue to receive experimental improvements as part of ongoing learning and development.
+It is intended primarily for educational experimentation rather than as a fully established commercial agency.
 
-## Future Exploration
+## Future Learning Opportunities
 
-Potential areas for further experimentation include:
+Possible areas for further experimentation include:
 
-- Improving accessibility and performance
-- Expanding interactive functionality
-- Integrating external APIs
-- Exploring backend development
-- Adding database-driven functionality
-- Experimenting with authentication
-- Building more advanced automation features
+- Improving accessibility and website performance.
+- Refining responsive layouts and interactions.
+- Connecting enquiry forms to a reliable email service.
+- Exploring backend development and database integration.
+- Learning about APIs, form validation, and data handling.
 
 ## Author
 
 **Jaskaran Virk**
 
-This project represents an early practical step into web development and AI-assisted software development, with a focus on learning through building and experimentation.
+Built as a practical learning project focused on web development, AI-assisted coding, version control, and deployment.
